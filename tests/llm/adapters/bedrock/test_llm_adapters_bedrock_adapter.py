@@ -73,11 +73,7 @@ def test_get_formatted_response_unstreamed():
 
     # Legacy format
     assert Adapter().get_formatted_response(
-        {
-            "conversation": {
-                "response": [{"completion": "Hello Legacy"}]
-            }
-        }
+        {"conversation": {"response": [{"completion": "Hello Legacy"}]}}
     ) == [{"role": "assistant", "text": "Hello Legacy", "type": "text"}]
 
 
